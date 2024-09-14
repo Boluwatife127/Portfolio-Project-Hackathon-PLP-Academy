@@ -3,6 +3,9 @@ This is my portfolio project for the hackathon 1
 
 # Portfolio Website - Boluwatife A. Babalola
 
+link to portfolio website using git hub PAGES
+https://boluwatife127.github.io/Portfolio-Project-Hackathon-PLP-Academy/
+
 ## Overview
 
 This is my personal portfolio website, showcasing my skills, projects, and services as a Front End Developer, Writer, and Designer. The site provides a clear and interactive way to navigate through my journey, including my educational background, projects, services offered, and ways to contact me.
@@ -54,3 +57,4 @@ For any inquiries, collaboration opportunities, or feedback, feel free to contac
 Email: boluwatife12700@gmail.com
 Phone: +234 906 4179 308
 Social Media: Links to Facebook, Instagram, Twitter, and GitHub​(contact).
+
