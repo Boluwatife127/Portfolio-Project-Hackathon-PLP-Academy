@@ -1,0 +1,682 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('Font Folder/Poppins-Light.ttf') format('truetype');
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'poppins';
+}
+
+body {
+    background-image: radial-gradient(circle, rgba(0, 0, 0, 0.4) 30%, rgba(0, 0, 0, 0.6) 100%, rgba(248, 165, 194, 0.15) 30%, rgba(120, 111, 166, 0.3) 70%, rgba(30, 55, 153, 0.4) 100%),
+        url('images/pexels-pixabay-33545.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    align-items: center;
+    justify-content: center;
+    margin: auto 0;
+    font-family: 'poppins', Helvetica, sans-serif;
+    color: white;
+    padding: 0 40px;
+    overflow: hidden;
+}
+
+p {
+    font-size: 1.2;
+    text-align: center;
+    color: white;
+    font-weight: 600;
+}
+
+h1 {
+    text-align: center;
+    border-bottom: 1px solid pink;
+    margin-left: 390px;
+    margin-right: 390px;
+}
+
+h2 {
+    text-align: center;
+}
+
+@media (max-width: 460px) {
+
+    h1,
+    h2 {
+        font-size: 1rem;
+        margin: 0 auto;
+    }
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0;
+    cursor: pointer;
+    width: 100%;
+    background-color: rgb(240, 127, 164);
+    padding: 13px 130px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    left: 0;
+    z-index: 1000;
+}
+
+@media (max-width: 460px) {
+    .navigation {
+        padding: 10px 10px 10px 10px;
+        z-index: +1;
+
+    }
+
+    .navigation h3 {
+        font-size: 0.9rem;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .navigation h3 i {
+        display: none;
+    }
+}
+
+.navigation h3 {
+    margin: 0;
+    color: white;
+    transition: transform 0.3s ease, color 0.3s ease;
+    /* Smooth transition */
+}
+
+.navigation h3:hover {
+    transform: scale(1.2);
+    /* Slightly enlarges the text */
+    color: #af314c;
+    /* Changes text color to yellow on hover */
+}
+
+.navigation h3.active {
+    color: #af314c;
+    /* Active color stays fixed */
+    font-weight: bold;
+    /* Optional: make it bold to emphasize it's active */
+}
+
+@keyframes floatUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes typeIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.contents img {
+    animation: floatUp 1.5s ease forwards;
+    /* Floats up the image */
+}
+
+.text p,
+.text h1,
+.text h2 {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 1s, transform 1s;
+    /* Make sure the text elements are animated */
+}
+
+
+
+
+/* Overall about section styling */
+.about {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid pink;
+    height: 560px;
+    margin-top: 13px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.about h3 {
+    text-align: center;
+    width: 100%;
+    color: pink;
+    margin-bottom: -10px;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideUp 0.8s ease-in-out forwards;
+    animation-delay: 0.3s;
+}
+
+.about section {
+    display: flex;
+    align-items: center;
+    margin-bottom: -10px;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideUp 0.8s ease-in-out forwards;
+}
+
+.about span {
+    display: inline-block;
+    font-size: 7rem;
+    color: pink;
+    margin-right: 20px;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInIcon 1s ease-in-out forwards;
+    animation-delay: 0.5s;
+}
+
+.about p {
+    display: inline-block;
+    width: calc(100% - 60px);
+    /* Space next to the icons */
+    text-align: justify;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideUp 0.8s ease-in-out forwards;
+    animation-delay: 0.7s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInIcon {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Define the keyframes for the float-in animation */
+@keyframes floatInFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Styling for skills section */
+.skill {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* Space between sections */
+    padding: 20px;
+}
+
+.skill section {
+    display: flex;
+    gap: 20px;
+    /* Space between cards */
+    flex-wrap: wrap;
+    /* Allow cards to wrap to the next line if needed */
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    /* Semi-transparent white for the blur effect */
+    backdrop-filter: blur(10px);
+    /* Blurring effect */
+    border-radius: 10px;
+    padding: 0px 10px 0px 0;
+    display: flex;
+    width: 398px;
+    /* Set a fixed width for cards */
+    height: 200px;
+    border: 1px solid pink;
+    cursor: pointer;
+    align-items: center;
+    /* Center items vertically */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    /* Optional: Add shadow for depth */
+    transition: transform 0.3s ease;
+    /* Smooth transition on hover */
+    opacity: 0;
+    /* Start hidden for animation */
+    animation: floatInFromBottom 0.8s ease forwards;
+    /* Apply the float-in animation */
+}
+
+.card:nth-child(1) {
+    animation-delay: 0.2s;
+    /* Stagger animations */
+}
+
+.card:nth-child(2) {
+    animation-delay: 0.4s;
+    /* Stagger animations */
+}
+
+.card:nth-child(3) {
+    animation-delay: 0.6s;
+    /* Stagger animations */
+}
+
+.card:nth-child(4) {
+    animation-delay: 0.8s;
+    /* Stagger animations */
+}
+
+.card:nth-child(5) {
+    animation-delay: 1s;
+    /* Stagger animations */
+}
+
+.card:nth-child(6) {
+    animation-delay: 1.2s;
+    /* Stagger animations */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    /* Slight lift effect on hover */
+}
+
+.part {
+    flex: 1;
+}
+
+.part.image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+.part.image img {
+    height: 200px;
+    width: 200px;
+    background-position: center;
+    border-radius: 5px;
+}
+
+.part.text {
+    flex: 2;
+}
+
+.part.text h4 {
+    margin: 0 0 5px 0;
+    font-size: 1.2rem;
+    color: #f8f9fa;
+}
+
+.part.text h5 {
+    font-size: 1rem;
+}
+
+.skill h6 {
+    color: pink;
+    text-align: center;
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+
+/* Define the keyframes for the float-in animation */
+@keyframes floatInFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Styling for projects section */
+.projects {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    /* Space between cards */
+    /* Allow cards to wrap to the next line if needed */
+}
+
+.projects .card-1,
+.projects .card-2 {
+    margin-top: 20px;
+    cursor: pointer;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.5);
+    height: 500px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    /* Semi-transparent white for the blur effect */
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    opacity: 0;
+    /* Start hidden for animation */
+    animation: floatInFromBottom 0.8s ease forwards;
+    /* Apply the float-in animation */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth transition for hover effects */
+}
+
+.projects .card-1 {
+    animation-delay: 0.2s;
+    /* Stagger animations */
+}
+
+.projects .card-2 {
+    animation-delay: 0.4s;
+    /* Stagger animations */
+}
+
+.projects .card-1:hover,
+.projects .card-2:hover {
+    transform: scale(1.1);
+    /* Slightly enlarge the card on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    /* Add shadow for depth */
+}
+
+.projects .text {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: justify;
+}
+
+.projects .img {
+    height: 300px;
+    width: 100%;
+    border-radius: 10px;
+    background-position: center;
+    background-size: cover;
+}
+
+.projects .img.a {
+    background-image: url('images/krame.png');
+}
+
+.projects .img.b {
+    background-image: url('images/img.jpg');
+}
+
+.projects a {
+    color: white;
+    text-decoration: none;
+}
+
+.projects a:hover {
+    text-decoration: underline;
+    /* Optional: underline on hover */
+}
+
+.something h3 {
+    color: pink;
+    font-size: 2rem;
+    text-align: center;
+}
+
+/* Define the keyframes for the float-in animation */
+@keyframes floatInFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Styling for services section */
+.services {
+    height: 550px;
+    margin: 20px 100px 0px 100px;
+    width: auto;
+    background: rgba(255, 255, 255, 0.1);
+    /* Semi-transparent white for the blur effect */
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 0px 50px 20px 50px;
+    opacity: 0;
+    /* Start hidden for animation */
+    animation: floatInFromBottom 0.8s ease forwards;
+    /* Apply the float-in animation */
+    animation-delay: 0.6s;
+    /* Delay for smoother entrance */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth transition for hover effects */
+}
+
+.services:hover {
+    transform: scale(1.02);
+    /* Slightly enlarge the section on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    /* Add shadow for depth */
+}
+
+.services h6 {
+    font-size: 1.3rem;
+    color: pink;
+}
+
+.services h5 {
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+
+/*  styling for contacts page  */
+
+/* Define the keyframes for the float-in animation */
+@keyframes floatInFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Styling for contacts page */
+/* Contacts Container */
+.contacts-container {
+    display: inline-block;
+    padding: 30px 40px 30px;
+    background: rgba(255, 255, 255, 0.1);
+    /* Semi-transparent white for the blur effect */
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    margin: 0 auto;
+    animation: floatInFromBottom 0.8s ease forwards;
+    /* animation-delay: 0.3s; */
+    cursor: pointer;
+    margin-top: 80px;
+}
+
+/* Contact Form on the Left */
+.contact-form {
+    width: 450px;
+    /* Take 45% space */
+    margin-right: 10px;
+    /* Add space between form and contact info */
+    display: inline-block;
+    /* Prevents text overflow */
+}
+
+/* Contact Form Elements */
+.contact-form h2 {
+    color: pink;
+    margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    /* Full width to align better */
+    padding: 4px 10px 4px 10px;
+    margin: 10px 0;
+    border: 1px solid pink;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    outline: none;
+}
+
+::placeholder {
+    color: pink;
+}
+
+.contact-form button {
+    background-color: pink;
+    color: #532e2e;
+    padding: 10px 20px;
+    border: none;
+    font-size: 1.17rem;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid pink;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: transparent;
+    color: pink;
+}
+
+/* Contact Info on the Right */
+.contact-info {
+    width: 500px;
+    display: inline-block;
+    text-align: justify;
+    padding-right: 40px;
+    /* Equal space to the contact form */
+    /* Prevents text overflow */
+}
+
+/* Contact Info Elements */
+.contact-info h2 {
+    font-size: 1.5rem;
+    color: pink;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.contact-info h5 {
+    font-size: 1.2rem;
+    color: #f0f0f0;
+
+    line-height: 1.76;
+    /* Increases readability */
+}
+
+.contact-details {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.contact-details a {
+    color: #f0f0f0;
+    text-decoration: none;
+}
+
+.contact-details a:hover {
+    text-decoration: underline;
+}
+
+/* Social Icons Styling */
+.contacts {
+    justify-content: space-around;
+    display: flex;
+
+    margin-top: 25px;
+
+}
+
+.contacts a {
+    color: #f0f0f0;
+    font-size: 2rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.contacts a:hover {
+    transform: scale(1.2);
+    color: pink;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .contacts-container {
+        flex-direction: column;
+    }
+
+    .contact-form,
+    .contact-info {
+        width: 100%;
+        margin: 0;
+        /* Remove margin on mobile */
+        text-align: center;
+    }
+
+    .contact-info {
+        margin-top: 30px;
+        /* Space between form and contact info on mobile */
+    }
+}
