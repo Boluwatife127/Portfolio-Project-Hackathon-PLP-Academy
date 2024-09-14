@@ -47,3 +47,10 @@ This is my personal portfolio website, showcasing my skills, projects, and servi
 - Integrate backend functionality for the contact form.
 - Continuously update skills and projects as I learn new technologies and complete new projects.
 
+##Contact
+
+For any inquiries, collaboration opportunities, or feedback, feel free to contact me through the form on the contact page, or via the following:
+
+Email: boluwatife12700@gmail.com
+Phone: +234 906 4179 308
+Social Media: Links to Facebook, Instagram, Twitter, and GitHub​(contact).
